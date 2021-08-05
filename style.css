@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.navbar{
+  /* background: 	paleturquoise; */
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  font-family: 'Fredoka One', sans-serif;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.navbar.sticky{
+  padding: 25px 0;
+  background: paleturquoise;
+}
+
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.navbar .logo a{
+  font-size: 35px;
+  color: white;
+  font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: 	paleturquoise;
+}
+
+.navbar.sticky .logo a span{
+    color: 	deepskyblue;
+}
+
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a{
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+  color: 	paleturquoise;
+}
+
+.navbar.sticky .menu li a:hover{
+  color: 	deepskyblue;
+}
+
+.menu-btn{
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.home{
+  display: flex; 
+  background: url("https://i.pinimg.com/originals/96/87/38/9687387cb690e2fd2451ab8541b75730.jpg") no-repeat center;
+  background-size: cover;
+  object-fit: none;
+  height: 100vh;
+  color: white;
+  min-height: 500px;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.home .max-width{
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+  font-size: 27px;
+}
+
+.home .home-content .text-2{
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3{
+  font-size: 45px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+  color: paleturquoise;
+  font-weight: 500;
+}
+
+.home .home-content a{
+  display: inline-block;
+  background: paleturquoise;
+  color: white;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid paleturquoise;
+  transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+  color: paleturquoise;
+  background: none;
+}
+
+
+
+
+
+
+section{
+  padding: 100px 0;
+}
+
+.about{
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.about .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.about .title::before{
+  position: absolute;
+  content: '';
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: paleturquoise;
+  transform: translateX(-50%)
+}
+
+.about .title::after{
+  content: 'Who I am';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: deepskyblue;
+  padding: 5px;
+  background: white;
+  transform: translateX(-50%);
+}
+
+.about .about-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .about-content .left{
+  width: 45%
+}
+
+.about .about-content .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-content .right{
+  width: 55%
+}
+
+.about .about-content .right .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+  color: deepskyblue;
+}
+
+.about .about-content .right p{
+  text-align: justify;
+}
+
+.about .about-content .right a{
+  display: inline-block;
+  background: paleturquoise;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid paleturquoise;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+  color: paleturquoise;
+  background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px){
+  .home .max-width{
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1104px){
+  .about .about-content .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 991px){
+  .max-width{
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px){
+  /* tambahannn */
+  .navbar .menu li a:hover{
+    color: 	deepskyblue;
+  }
+  /* akhir tambahann */
+
+  .menu-btn{
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn i.active::before{
+    content: "\f00d"
+  }
+
+  .navbar .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    top: 0;
+    background: paleturquoise;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active{
+    left: 0;
+  }
+
+  .navbar .menu li{
+    display: block;
+  }
+
+  .navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .home .home-content .text-2{
+    font-size: 70px;
+  }
+
+  .home .home-content .text-3{
+    font-size: 35px;
+  } 
+
+  .home .home-content a{
+    font-size: 23;
+    padding: 10px 30px;
+  }
+
+  .about .about-content .column{
+    width: 100%;
+  }
+
+  .max-width{
+    max-width: 800px;
+  }
+
+  .about .about-content .column .left{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .column .right{
+    flex: 100%;
+  }
+}
+
+@media (max-width: 690px){
+  .max-width{
+    padding: 0 23px;
+  }
+
+  .home .home-content .text-2{
+    font-size: 60px;
+  }
+
+  .home .home-content .text-3{
+    font-size: 32px;
+  }
+
+  .home .home-content a{
+    font-size: 20;
+  }
+}
+
+@media (max-width: 500px){
+
+  .home .home-content .text-2{
+    font-size: 50px;
+  }
+
+  .home .home-content .text-3{
+    font-size: 27px;
+  }
+}
