@@ -13,6 +13,8 @@
   margin: auto;
 }
 
+/* navbar */
+
 .navbar{
   /* background: 	paleturquoise; */
   position: fixed;
@@ -38,14 +40,19 @@
   font-size: 35px;
   color: white;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a{
+  color: azure;
 }
 
 .navbar .logo a span{
-    color: 	paleturquoise;
+    color: 	deepskyblue;
 }
 
 .navbar.sticky .logo a span{
-    color: 	deepskyblue;
+    color: 	azure;
 }
 
 .navbar .menu li{
@@ -62,19 +69,26 @@
 }
 
 .navbar .menu li a:hover{
-  color: 	paleturquoise;
+  color: 	lightskyblue;
 }
 
-.navbar.sticky .menu li a:hover{
-  color: 	deepskyblue;
-}
+/*.navbar.sticky .menu li a:hover{
+  color: 	azure;
+}*/
 
 .menu-btn{
   color: white;
   font-size: 23px;
   cursor: pointer;
   display: none;
+  transition: all 0.3s ease;
 }
+
+.navbar.sticky .menu-btn{
+  color: azure;
+}
+
+/* home */
 
 .home{
   display: flex; 
@@ -107,7 +121,7 @@
 }
 
 .home .home-content .text-3 span{
-  color: paleturquoise;
+  color: lightskyblue;
   font-weight: 500;
 }
 
@@ -129,19 +143,17 @@
 }
 
 
-
-
-
+/* sections */
 
 section{
   padding: 100px 0;
 }
 
-.about{
+.about, .services{
   font-family: 'Fredoka One', sans-serif;
 }
 
-.about .title{
+section .title{
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -150,34 +162,48 @@ section{
   padding-bottom: 20px;
 }
 
-.about .title::before{
+section .title::before{
   position: absolute;
   content: '';
   bottom: 0px;
   left: 50%;
   width: 180px;
   height: 3px;
-  background: paleturquoise;
+  background: black;
   transform: translateX(-50%)
 }
 
-.about .title::after{
-  content: 'Who I am';
+section .title::after{
   position: absolute;
   bottom: -12px;
   left: 50%;
   font-size: 20px;
-  color: deepskyblue;
+  color: paleturquoise;
   padding: 5px;
   background: white;
   transform: translateX(-50%);
 }
 
-.about .about-content{
+.about .about-content, .services .serv-content{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+/* about */
+
+.about{
+  background: aliceblue;
+}
+
+.about .title::after{
+  background: aliceblue;
+}
+
+.about .title::after{
+  content: "Who i am";
+  color: lightskyblue
 }
 
 .about .about-content .left{
@@ -202,7 +228,7 @@ section{
 }
 
 .about .about-content .right .text span{
-  color: deepskyblue;
+  color: lightskyblue;
 }
 
 .about .about-content .right p{
@@ -211,25 +237,77 @@ section{
 
 .about .about-content .right a{
   display: inline-block;
-  background: paleturquoise;
+  background: lightskyblue;
   color: white;
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid paleturquoise;
+  border: 2px solid lightskyblue;
   transition: all 0.3s ease;
 }
 
 .about .about-content .right a:hover{
-  color: paleturquoise;
+  color: lightskyblue;
   background: none;
 }
 
 
+/* services */
 
+.services{
+  background: deepskyblue;
+  color: white;
+}
 
+.services .title::before{
+  background: white;
+}
+
+.services .title::after{
+  content: "What i made";
+  background: deepskyblue;
+}
+
+.services .serv-content .card{
+  width: calc(33% - 20px);
+  text-align: center;
+  background: lightskyblue;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover{
+  background: paleturquoise;
+}
+
+.services .serv-content .card .box{
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box{
+  transform: scale(1.05);
+}
+
+.services .serv-content .card i{
+  font-size: 50px;
+  color: paleturquoise;
+  transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i{
+  font-size: 50px;
+  color: white;
+}
+
+.services .serv-content .card .text{
+   font-size: 25px;
+   font-weight: 500;
+   margin: 10px 0 7px 0;
+}
 
 
 
@@ -246,8 +324,8 @@ section{
 
 @media (max-width: 1104px){
   .about .about-content .left img{
-    height: 350px;
-    width: 350px;
+    height: 320px;
+    width: 320px;
   }
 }
 
@@ -329,6 +407,11 @@ section{
   .about .about-content .column .right{
     flex: 100%;
   }
+
+  .services .serv-content .card{
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 690px){
@@ -346,6 +429,10 @@ section{
 
   .home .home-content a{
     font-size: 20;
+  }
+
+  .services .serv-content .card{
+    width: 100%;
   }
 }
 
