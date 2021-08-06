@@ -430,18 +430,131 @@ section .title::after{
 .contact .contact-content .info .head{
   font-weight: 500;
 }
+
+.wrapper .button {
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: lightskyblue;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  text-align: center;
+}
+
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover{
+  width: 180px;
+}
+
+.wrapper .button:nth-child(2):hover{
+  width: 200px;
+}
+
+.wrapper .button:nth-child(3):hover{
+  width: 160px;
+}
+
+.wrapper .button:nth-child(4):hover{
+  width: 180px;
+}
+
+.wrapper .button:nth-child(1) .icon{
+  color: #5865F2;
+}
+
+.wrapper .button:nth-child(2) .icon{
+  color: #e1306c;
+}
+
+.wrapper .button:nth-child(3) .icon{
+  color: #333;
+}
+
+.wrapper .button:nth-child(4) .icon{
+  color: #ff0000;
+}
+
+.wrapper .button:hover .icon{
+  color: white;
+}
+
+.wrapper .button:nth-child(1):hover .icon{
+  background: #5865F2;
+}
+
+.wrapper .button:nth-child(2):hover .icon{
+  background: #e1306c;
+}
+
+.wrapper .button:nth-child(3):hover .icon{
+  background: #333;
+}
+
+.wrapper .button:nth-child(4):hover .icon{
+  background: #ff0000;
+}
+
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span{
+  color: #5865F2;
+}
+
+.wrapper .button:nth-child(2) span{
+  color: #e1306c;
+}
+
+.wrapper .button:nth-child(3) span{
+  color: #333;
+}
+
+.wrapper .button:nth-child(4) span{
+  color: #ff0000;
+}
+
+.contact .contact-content .right .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+
+
 /* foooter */
 
 footer{
-  background: paleturquoise;
+  background: lightskyblue;
   padding: 20px 23px;
-  color: azure;
+  color: black;
 }
 
 footer span a{
-  color: deepskyblue;
+  color: azure;
 }
-
 
 
 
