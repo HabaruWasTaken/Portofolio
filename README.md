@@ -6,6 +6,8 @@ And there is 3 section for now:
 
 2. About
 
-3. Skills
+3. Projects
 
-4. Contacts
+4. Skills
+
+5. Contacts

@@ -84,6 +84,10 @@
   transition: all 0.3s ease;
 }
 
+.menu-btn:hover, .navbar.sticky .menu-btn:hover{
+  color: lightskyblue
+}
+
 .navbar.sticky .menu-btn{
   color: azure;
 }
@@ -149,10 +153,6 @@ section{
   padding: 100px 0;
 }
 
-.about, .services{
-  font-family: 'Fredoka One', sans-serif;
-}
-
 section .title{
   position: relative;
   text-align: center;
@@ -184,11 +184,15 @@ section .title::after{
   transform: translateX(-50%);
 }
 
-.about .about-content, .services .serv-content{
+.about .about-content, .projects .projects-content, .skills .skills-content, .contact .contact-content{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.about, .projects, .skills, .contact, footer{
+  font-family: 'Fredoka One', sans-serif;
 }
 
 /* about */
@@ -198,16 +202,13 @@ section .title::after{
 }
 
 .about .title::after{
+  content: "Who i am";
+  color: lightskyblue;
   background: aliceblue;
 }
 
-.about .title::after{
-  content: "Who i am";
-  color: lightskyblue
-}
-
 .about .about-content .left{
-  width: 45%
+  width: 45%;
 }
 
 .about .about-content .left img{
@@ -218,7 +219,7 @@ section .title::after{
 }
 
 .about .about-content .right{
-  width: 55%
+  width: 55%;
 }
 
 .about .about-content .right .text{
@@ -254,23 +255,23 @@ section .title::after{
 }
 
 
-/* services */
+/* projects */
 
-.services{
+.projects{
   background: deepskyblue;
   color: white;
 }
 
-.services .title::before{
+.projects .title::before{
   background: white;
 }
 
-.services .title::after{
+.projects .title::after{
   content: "What i made";
   background: deepskyblue;
 }
 
-.services .serv-content .card{
+.projects .projects-content .card{
   width: calc(33% - 20px);
   text-align: center;
   background: lightskyblue;
@@ -280,41 +281,174 @@ section .title::after{
   transition: all 0.3s ease;
 }
 
-.services .serv-content .card:hover{
+.projects .projects-content .card:hover{
   background: paleturquoise;
 }
 
-.services .serv-content .card .box{
+.projects .projects-content .card .box{
   transition: all 0.3s ease;
 }
 
-.services .serv-content .card:hover .box{
+.projects .projects-content .card:hover .box{
   transform: scale(1.05);
 }
 
-.services .serv-content .card i{
+.projects .projects-content .card i, .projects .projects-content .card svg{
   font-size: 50px;
   color: paleturquoise;
   transition: color 0.3s ease;
 }
 
-.services .serv-content .card:hover i{
+.projects .projects-content .card:hover i, .projects .projects-content .card:hover svg{
   font-size: 50px;
   color: white;
 }
 
-.services .serv-content .card .text{
+.projects .projects-content .card .text{
    font-size: 25px;
    font-weight: 500;
    margin: 10px 0 7px 0;
 }
 
+/* skills */
+
+.skills{
+  background: aliceblue;
+}
+
+.skills .title::after{
+  content: "What i know";
+  color: paleturquoise;
+  background: aliceblue;
+}
+
+.skills .skills-content .column{
+  width: calc(50% - 30px)
+}
+
+.skills .skills-content .left .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .left p{
+  text-align: justify;
+}
+
+.skills .skills-content .right .bars{
+  margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.skills .skills-content .right .line{
+  height: 5px;
+  width: 100%;
+  background: deepskyblue;
+  position: relative;
+}
+
+.skills .skills-content .right .line::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: paleturquoise;
+}
+
+.skills .skills-content .right .html::before{
+  width: 70%;
+}
+
+.skills .skills-content .right .css::before{
+  width: 40%;
+}
+
+.skills .skills-content .right .js::before{
+  width: 50%;
+}
+
+
+/* contact */
+
+.contact{
+  background: deepskyblue;
+  color: white;
+}
+
+.contact .title::after{
+  content: "More about me";
+  background: deepskyblue;
+}
+
+.contact .contact-content .column{
+  width: calc(50% - 30px)
+}
+
+.contact .contact-content .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left p{
+  text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+  font-size: 25px;
+  color: paleturquoise;
+}
+
+.contact .contact-content .info .head{
+  font-weight: 500;
+}
+/* foooter */
+
+footer{
+  background: paleturquoise;
+  padding: 20px 23px;
+  color: azure;
+}
+
+footer span a{
+  color: deepskyblue;
+}
 
 
 
 
 
 
+
+/* resp */
 
 @media (max-width: 1300px){
   .home .max-width{
@@ -408,10 +542,15 @@ section .title::after{
     flex: 100%;
   }
 
-  .services .serv-content .card{
+  .projects .projects-content .card{
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
+
+  .skills .skills-content .column, .contact .contact-content .column{
+    width: 100%;
+    margin-bottom: 35px;
+  } 
 }
 
 @media (max-width: 690px){
@@ -431,9 +570,9 @@ section .title::after{
     font-size: 20;
   }
 
-  .services .serv-content .card{
+  .projects .projects-content .card{
     width: 100%;
-  }
+  } 
 }
 
 @media (max-width: 500px){
