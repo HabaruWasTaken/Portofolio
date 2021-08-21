@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .max-width{
   max-width: 1300px;
   padding: 0 80px;
@@ -99,7 +103,7 @@
   background: url("https://i.pinimg.com/originals/96/87/38/9687387cb690e2fd2451ab8541b75730.jpg") no-repeat center;
   background-size: cover;
   object-fit: none;
-  height: 100vh;
+  height: 100%;
   color: white;
   min-height: 500px;
   font-family: 'Fredoka One', sans-serif;
@@ -111,6 +115,7 @@
 
 .home .home-content .text-1{
   font-size: 27px;
+  margin-top: 30px;
 }
 
 .home .home-content .text-2{
@@ -432,7 +437,6 @@ section .title::after{
 }
 
 .wrapper .button {
-  display: block;
   height: 60px;
   width: 60px;
   margin-bottom: 5px;
@@ -441,7 +445,24 @@ section .title::after{
   background: lightskyblue;
   transition: all 0.3s ease-out;
   overflow: hidden;
+  display: block;
 }
+
+/*.wrapper .button:nth-child(2), .wrapper .button:nth-child(4){
+  display: ;
+}*/
+
+/*.wrapper .button:nth-child(2):hover{
+  width: 200px;
+}
+
+.wrapper .button:nth-child(3):hover{
+  width: 160px;
+}
+
+.wrapper .button:nth-child(4):hover{
+  width: 180px;
+}*/
 
 .wrapper .button .icon{
   display: inline-block;
@@ -558,6 +579,35 @@ footer span a{
 
 
 
+/* scroll */
+.scroll-up-btn{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: paleturquoise;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: white;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
+
+
+
+
 
 
 
@@ -586,6 +636,12 @@ footer span a{
   /* tambahannn */
   .navbar .menu li a:hover{
     color: 	deepskyblue;
+  }
+
+  .scroll-up-btn{
+    opacity: 0;
+    pointer-events: none;
+    bottom: 10px;
   }
   /* akhir tambahann */
 
