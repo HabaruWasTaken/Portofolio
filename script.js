@@ -1,4 +1,4 @@
-$(document).ready(function(){
+  $(document).ready(function(){
   $(window).scroll(function(){
       if (this.scrollY > 20){
         $(".navbar").addClass("sticky");
@@ -55,5 +55,9 @@ $(document).ready(function(){
   $(".navbar .menu li").click(()=>{
     $('.navbar .menu').toggleClass('active')
     $('.menu-btn i'). toggleClass('active')
+  })
+
+  $(".project-1").click(()=>{
+    window.open('projects/chino-chan.djs', '_blank'); 
   })
 });
