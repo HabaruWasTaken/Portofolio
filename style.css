@@ -100,17 +100,24 @@ html{
 
 .home{
   display: flex; 
-  background: url("https://i.pinimg.com/originals/96/87/38/9687387cb690e2fd2451ab8541b75730.jpg") no-repeat center;
+  background: url("9687387cb690e2fd2451ab8541b75730.jpg") no-repeat center;
   background-size: cover;
   object-fit: none;
   height: 100%;
   color: white;
   min-height: 500px;
   font-family: 'Fredoka One', sans-serif;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home .home-content{
+  padding-top: 80px;
 }
 
 .home .max-width{
-  margin: auto 0 auto 40px;
+ margin: auto 0 auto 40px;
 }
 
 .home .home-content .text-1{
@@ -155,7 +162,7 @@ html{
 /* sections */
 
 section{
-  padding: 100px 0;
+  /*padding-bottom: 60px;*/
 }
 
 section .title{
@@ -164,7 +171,7 @@ section .title{
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 60px;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 section .title::before{
@@ -379,11 +386,11 @@ section .title::after{
 }
 
 .skills .skills-content .right .css::before{
-  width: 40%;
+  width: 60%;
 }
 
 .skills .skills-content .right .js::before{
-  width: 50%;
+  width: 40%;
 }
 
 
@@ -609,6 +616,19 @@ footer span a{
   bottom: 30px;
 }
 
+/* .wave-up{
+
+} */
+
+.wave-down{
+  bottom: -4px;
+  position: relative;
+}
+
+.home .wave-down{
+  bottom: -1px;
+  position: relative;
+}
 
 
 
@@ -638,6 +658,11 @@ footer span a{
 
 @media (max-width: 947px){
   /* tambahannn */
+  .home .wave-down{
+    bottom: -8px;
+    position: relative;
+  }
+
   .navbar .menu li a:hover{
     color: 	deepskyblue;
   }
