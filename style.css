@@ -100,8 +100,9 @@ html{
 
 .home{
   display: flex; 
-  background: url("9687387cb690e2fd2451ab8541b75730.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url("9687387cb690e2fd2451ab8541b75730.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
   object-fit: none;
   height: 100%;
   color: white;
@@ -137,7 +138,7 @@ html{
 }
 
 .home .home-content .text-3 span{
-  color: lightskyblue;
+  color: deepskyblue;
   font-weight: 500;
 }
 
@@ -379,20 +380,44 @@ section .title::after{
   left: 0;
   top: 0;
   background: paleturquoise;
+  transition: all 1.5s ease;
 }
 
 .skills .skills-content .right .html::before{
-  width: 70%;
+  width: 0%;
+  transition: all 1.8s ease;
 }
 
 .skills .skills-content .right .css::before{
-  width: 60%;
+  width: 0%;
+  transition: all 1.6s ease;
 }
 
 .skills .skills-content .right .js::before{
+  width: 0%;
+  transition: all 1.2s ease;
+}
+
+.skills .skills-content .right .htmlOn::before{
+  width: 70%;
+}
+
+.skills .skills-content .right .cssOn::before{
+  width: 60%;
+}
+
+.skills .skills-content .right .jsOn::before{
   width: 40%;
 }
 
+@keyframes html {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
 
 /* contact */
 
@@ -412,7 +437,7 @@ section .title::after{
 
 .contact .contact-content .text{
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -443,133 +468,9 @@ section .title::after{
   font-weight: 500;
 }
 
-.contact-content .right .wrapper{
-  display: inline-block;
-}
-
-.wrapper .button {
-  height: 60px;
-  width: 60px;
-  margin-bottom: 5px;
-  border-radius: 50px;
-  cursor: pointer;
-  background: lightskyblue;
-  transition: all 0.3s ease-out;
-  overflow: hidden;
-  display: inline-block;
-}
-
-/*.wrapper .button:nth-child(2), .wrapper .button:nth-child(4){
-  display: ;
-}*/
-
-/*.wrapper .button:nth-child(2):hover{
-  width: 200px;
-}
-
-.wrapper .button:nth-child(3):hover{
-  width: 160px;
-}
-
-.wrapper .button:nth-child(4):hover{
-  width: 180px;
-}*/
-
-.wrapper .button .icon{
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  border-radius: 50px;
-  box-sizing: border-box;
-  line-height: 60px;
-  text-align: center;
-}
-
-.wrapper .button .icon i{
-  font-size: 25px;
-  line-height: 60px;
-  transition: all 0.3s ease-out;
-}
-
-.contact-content .right .row-1 .button:nth-child(1):hover{
-  width: 230px;
-}
-
-.contact-content .right .row-1 .button:nth-child(2):hover{
-  width: 200px;
-}
-
-.contact-content .right .row-2 .button:nth-child(1):hover{
-  width: 160px;
-}
-
-.contact-content .right .row-2 .button:nth-child(2):hover{
-  width: 180px;
-}
-
-.contact-content .right .row-1 .button:nth-child(1) .icon{
-  color: #5865F2;
-}
-
-.contact-content .right .row-1 .button:nth-child(2) .icon{
-  color: #e1306c;
-}
-
-.contact-content .right .row-2 .button:nth-child(1) .icon{
-  color: #333;
-}
-
-.contact-content .right .row-2 .button:nth-child(2) .icon{
-  color: #ff0000;
-}
-
-.contact-content .right .wrapper .button:hover .icon{
-  color: white;
-}
-
-.contact-content .right .row-1 .button:nth-child(1):hover .icon{
-  background: #5865F2;
-}
-
-.contact-content .right .row-1 .button:nth-child(2):hover .icon{
-  background: #e1306c;
-}
-
-.contact-content .right .row-2 .button:nth-child(1):hover .icon{
-  background: #333;
-}
-
-.contact-content .right .row-2 .button:nth-child(2):hover .icon{
-  background: #ff0000;
-}
-
-.wrapper .button span{
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 60px;
-  margin-left: 10px;
-  transition: all 0.3s ease-out;
-}
-
-.contact-content .right .row-1 .button:nth-child(1) span{
-  color: #5865F2;
-}
-
-.contact-content .right .row-1 .button:nth-child(2) span{
-  color: #e1306c;
-}
-
-.contact-content .right .row-2 .button:nth-child(1) span{
-  color: #333;
-}
-
-.contact-content .right .row-2 .button:nth-child(2) span{
-  color: #ff0000;
-}
-
 .contact .contact-content .right .text{
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -579,9 +480,12 @@ section .title::after{
 /* foooter */
 
 footer{
-  background: lightskyblue;
-  padding: 20px 23px;
-  color: black;
+  /* background: lightskyblue; */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url("9687387cb690e2fd2451ab8541b75730.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 40px 23px;
+  color: deepskyblue;
 }
 
 footer span a{
